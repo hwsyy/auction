@@ -1,0 +1,49 @@
+.top{
+	height: 48px;
+	width: 100%;
+	background: #09bb07;
+}
+.top-l li{
+	list-style: none;
+	float: left;
+	line-height: 48px;
+	width: 68px;
+	height: 48px;
+	margin-left: 10px;
+	text-align: center;
+}
+.top-l li a{
+	color: #fff;
+	display: block;
+	width: 53px;
+	height: 40px;
+	text-align: center;
+	font-size: 1.2rem;
+}
+.top-l li a{
+	border-bottom: 3px solid #fff;
+}
+.weui-article h1{
+	font-weight: bold;
+}
+.title{
+	color: #09bb07;
+}
+section>p> span{
+	width: 40px;
+	height: 30px;
+	display: inline-block;
+	border: 1px solid #D7D6DC;
+	margin:0 5px;
+	text-align: center;
+	vertical-align: middle;
+}
+.sele{
+	border: 2px solid #09bb07;
+}
+section>p>label{
+	margin-left: 20px;
+}
+section>p>b{
+	color: #CE3C39;
+}

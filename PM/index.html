@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<title></title>
+	<!--<link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/1.0.2/weui.css"/>-->
+    <link rel="stylesheet" href="//res.wx.qq.com/open/libs/weui/1.0.2/weui.min.css"/>
+    <link rel="stylesheet" href="css/style.css" />
+
+	</head>
+	<body>
+		<div class="top">
+			<div class="top-l">
+				<li><a href="#">关注</a></li>
+				<!--<li><a href="#">精选</a></li>-->
+			</div>
+			<div class="top-r">				
+			</div>
+		</div>	
+    <div class="page__bd">
+        <!--<a href="javascript:;" class="weui-btn weui-btn_primary">点击展现searchBar</a>-->
+        <div class="weui-search-bar" id="searchBar">
+            <form class="weui-search-bar__form">
+                <div class="weui-search-bar__box">
+                    <i class="weui-icon-search"></i>
+                    <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required/>
+                    <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+                </div>
+                <label class="weui-search-bar__label" id="searchText">
+                    <i class="weui-icon-search"></i>
+                    <span>搜索</span>
+                </label>
+            </form>
+            <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+        </div>
+        <!--<div class="weui-cells searchbar-result" id="searchResult">
+            <div class="weui-cell weui-cell_access">
+                <div class="weui-cell__bd weui-cell_primary">
+                    <p>实时搜索文本</p>
+                </div>
+            </div>
+            <div class="weui-cell weui-cell_access">
+                <div class="weui-cell__bd weui-cell_primary">
+                    <p>实时搜索文本</p>
+                </div>
+            </div>
+            <div class="weui-cell weui-cell_access">
+                <div class="weui-cell__bd weui-cell_primary">
+                    <p>实时搜索文本</p>
+                </div>
+            </div>
+            <div class="weui-cell weui-cell_access">
+                <div class="weui-cell__bd weui-cell_primary">
+                    <p>实时搜索文本</p>
+                </div>
+            </div>
+        </div>-->
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js" ></script>
+<script type="text/javascript">
+    $(function(){
+        var $searchBar = $('#searchBar'),
+            $searchResult = $('#searchResult'),
+            $searchText = $('#searchText'),
+            $searchInput = $('#searchInput'),
+            $searchClear = $('#searchClear'),
+            $searchCancel = $('#searchCancel');
+
+        function hideSearchResult(){
+            $searchResult.hide();
+            $searchInput.val('');
+        }
+        function cancelSearch(){
+            hideSearchResult();
+            $searchBar.removeClass('weui-search-bar_focusing');
+            $searchText.show();
+        }
+
+        $searchText.on('click', function(){
+            $searchBar.addClass('weui-search-bar_focusing');
+            $searchInput.focus();
+        });
+        $searchInput
+            .on('blur', function () {
+                if(!this.value.length) cancelSearch();
+            })
+            .on('input', function(){
+                if(this.value.length) {
+                    $searchResult.show();
+                } else {
+                    $searchResult.hide();
+                }
+            })
+        ;
+        $searchClear.on('click', function(){
+            hideSearchResult();
+            $searchInput.focus();
+        });
+        $searchCancel.on('click', function(){
+            cancelSearch();
+            $searchInput.blur();
+        });
+    });
+</script>	
+		    <div class="page__bd" style="margin-bottom: 50px;">
+		        <article class="weui-article">
+		            <h1>当前拍卖物品：</h1>
+		            <section>
+		                <section>
+		                	<h2 class="title">iPhone7 Plus</h2>
+		                    <p>
+		                                    型号：4GB+128G 金色 
+		                    </p>
+		                    <p>竞拍规则：首次竞拍出价时间为15秒，统计15秒后的最高得分，然后大家有3秒的加分时间，如果3秒内未有人加分则最高分得！</p>
+		                    <p>
+		                        <div class="weui-grids">
+							        <a href="javascript:;" class="weui-grid" style="height: 110px;">
+							                <img src="img/余额.png" alt="">
+							        </a>
+							        <a href="javascript:;" class="weui-grid" style="height: 110px;">
+							                <img src="img/消息.png" alt="">
+							        </a>
+							        <a href="javascript:;" class="weui-grid" style="height: 110px;">
+							                <img src="img/拍卖.png" alt="">
+							        </a>
+							    </div>
+		                    </p>
+		                    <p><label style="color: #F43530;font-weight: bold;">当前出价最高者：</label></p>
+		                    <p><marquee style="color: #09bb07;">1、张三：560分；  2、李四：520分；  3、小明：480分；</marquee></p>
+		                    <p class="view">+<span>1分</span><span>10分</span><span>50分</span><label>剩余积分：</label><b>240</b></p>
+		                	<div class="button-sp-area">
+								<a href="javascript:;" class="weui-btn weui-btn_primary">出价</a>
+							</div>
+		                </section>	               	
+		                <section>
+		                	<h2 class="title">iPhone7 Plus</h2>
+		                    <p>
+		                                    型号：4GB+128G 金色 
+		                    </p>
+		                    <p>竞拍规则：首次竞拍出价时间为15秒，统计15秒后的最高得分，然后大家有3秒的加分时间，如果3秒内未有人加分则最高分得！</p>
+		                    <p>
+		                        <div class="weui-grids">
+							        <a href="javascript:;" class="weui-grid" style="height: 110px;">
+							                <img src="img/余额.png" alt="">
+							        </a>
+							        <a href="javascript:;" class="weui-grid" style="height: 110px;">
+							                <img src="img/消息.png" alt="">
+							        </a>
+							        <a href="javascript:;" class="weui-grid" style="height: 110px;">
+							                <img src="img/拍卖.png" alt="">
+							        </a>
+							    </div>
+		                    </p>
+		                    <p><label style="color: #F43530;font-weight: bold;">当前出价最高者：</label></p>
+		                    <p><marquee style="color: #09bb07;">1、张三：560分；  2、李四：520分；  3、小明：480分；</marquee></p>
+		                    <p class="view">+<span>1分</span><span>10分</span><span>50分</span><label>剩余积分：</label><b>240</b></p>
+		                	<div class="button-sp-area">
+								<a href="javascript:;" class="weui-btn weui-btn_primary">出价</a>
+							</div>
+		                </section>
+		            </section>
+		        </article>
+		    </div>
+            <div class="weui-tabbar" style="position: fixed;">
+                <a href="index.html" class="weui-tabbar__item weui-bar__item_on">
+                    <img src="img/首页-首页.png" alt="" class="weui-tabbar__icon">
+                    <p class="weui-tabbar__label">首页</p>
+                </a>
+                <a href="" onclick="javascript:alert('暂未开放！敬请期待~');" class="weui-tabbar__item">
+                    <img src="img/发布 (1).png" alt="" class="weui-tabbar__icon">
+                    <p class="weui-tabbar__label">发布</p>
+                </a>
+                <a href="" onclick="javascript:alert('暂未开放！敬请期待~');" class="weui-tabbar__item">
+                    <img src="img/发现 (1).png" alt="" class="weui-tabbar__icon">
+                    <p class="weui-tabbar__label">发现</p>
+                </a>
+                <a href="user-msg.html" class="weui-tabbar__item">
+                    <img src="img/我的 (1).png" alt="" class="weui-tabbar__icon">
+                    <p class="weui-tabbar__label">我</p>
+                </a>
+            </div>
+<script type="text/javascript">
+    $(function(){
+        $('.weui-tabbar__item').on('click', function () {
+            $(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
+        });
+    });
+</script>
+<script>
+	$(function(){
+		$(".view span").on('click',function(){
+			$(this).toggleClass('sele').siblings('span').removeClass('sele');
+		});
+	});
+</script>
+	</body>
+</html>
