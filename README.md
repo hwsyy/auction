@@ -13,8 +13,8 @@
      |-------PM	  //主题文件
      |        |--admin                      //项目后台处理文件、后台控制端界面
      |        |     |--BC                   //后台控制端
-     |   	    |     |  |--admin             //控制端界面功能后台
-     |   	    |     |  |   |--gengxin.php   //用户列表更新功能
+     |   	  |     |  |--admin             //控制端界面功能后台
+     |   	  |     |  |   |--gengxin.php   //用户列表更新功能
      |        |     |  |   |--jf-gx.php     //用户积分功能更新
      |        |     |  |   |--log.txt	    //后台操作日志（未完成）
      |        |     |  |   |--login.php     //登录功能
@@ -35,9 +35,9 @@
      |        |     |  |--user_add.php      //用户积分更新界面
      |        |     |  |--user_list_c.php   //用户信息
      |        |     |--pc-show
-     |   	    |     |     |--pc_result.php  // PC端中奖信息判断功能
-     |   	    |     |     |--pc_show1.php
-     |   	    |     |     |--pc_show2.php
+     |   	  |     |     |--pc_result.php  // PC端中奖信息判断功能
+     |   	  |     |     |--pc_show1.php
+     |   	  |     |     |--pc_show2.php
      |        |     |--phpExcel             //phpexcel 功能模块
      |        |     |--uploadimg            //上传商品的图片位置
      |        |     |--check.php            //
